@@ -58,19 +58,25 @@ def main():
     html_files = []
     convert_markdown = Markdown().convert
     append_html = html_files.append
+
     for markdown_file in markdown_files:
         with open(markdown_file) as md_file:
             content = md_file.read()
             content = convert_markdown(content)
             append_html(content)
 
-    # create HTML document from bootstrap-template with html-converted markdown files
+    # create HTML document from bootstrap-template with converted markdown files
     template = Template(TEMPLATE)
+    finished_templates = []
+    append_finished = finished_templates.append
     for html_file in html_files:
         markdown_html = template.render(title="My New Markdown", content=html_file)
-        with open("test_file.html", "w") as new_file:
-            new_file.write(markdown_html)
+        append_finished(markdown_html)
 
+    # write html-files
+    for index,finished_template in enumerate(finished_templates): 
+        with open(f"test_file_{index}.html", "w") as new_file:
+            new_file.write(finished_template)
 
 
 if __name__ == "__main__": 
