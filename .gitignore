@@ -7,3 +7,11 @@ test*
 
 # VSCode
 .vscode/
+
+# Misc
+/.idea/.gitignore
+/.idea/markdown_to_html.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/vcs.xml
