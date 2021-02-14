@@ -88,7 +88,16 @@ TEMPLATE = """
         .codehilite .vg { color: #19177C } /* Name.Variable.Global */
         .codehilite .vi { color: #19177C } /* Name.Variable.Instance */
         .codehilite .vm { color: #19177C } /* Name.Variable.Magic */
-        .codehilite .il { color: #666666 } /* Literal.Number.Integer.Long */ 
+        .codehilite .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+        /* custom styling */
+
+        .codehilite {
+            display: table;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
     </style>
 
     <title> {{ title }} </title>
