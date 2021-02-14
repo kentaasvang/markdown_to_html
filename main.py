@@ -123,7 +123,7 @@ def main():
 
     # create parser and parse input arguments
     parser = argparse.ArgumentParser(
-        description="sum the integers at the command line")
+        description="Create HTML-friendly markdown-page")
 
     parser.add_argument(
         "markdown_files",
